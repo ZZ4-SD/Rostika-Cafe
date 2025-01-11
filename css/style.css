@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&display=swap");
+
+:root {
+  --main-color: #f8eeec;
+  --primary-color: #996549;
+  --white-color: #fff;
+  --prodct: #000;
+  --but: #ebac4d;
+
+  --container-width-lg: 90%;
+  --container-width-md: 86%;
+
+  --transition: all 400ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none !important;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 10px !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.containers {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+  max-width: 1536px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+
+span {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.started {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.started img {
+  width: 100%;
+  object-fit: fill;
+  height: 100vh;
+}
+
+.started a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--but);
+  color: var(--primary-color);
+  width: 20%;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 12rem;
+  transition: var(--transition);
+}
+
+.started a:hover {
+  background-color: var(--primary-color);
+  color: var(--but);
+}
+
+.catgry {
+  border: 0.1rem solid var(--but);
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: var(--transition);
+  border-radius: 1rem;
+}
+.catgry:hover{
+  border: 0.1rem solid var(--main-color);
+}
+.catgry:hover h3 {
+  color: var(--main-color);
+}
+
+.catgry:hover span {
+  color: var(--main-color);
+}
+
+.catgry h3,
+span {/* السعر والاسم*/
+  color: var(--but);
+  transition: var(--transition);
+}
+
+.catgey_img {
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: var(--main-color);
+  transition: var(--transition);
+}
+
+.catgry:hover .catgey_img svg {
+  color: var(--main-color);
+}
+
+.catgey_img svg {  /* دي بتاعه الشعار جوه القسم*/
+  width: 8rem;
+  color: var(--but);
+  transition: var(--transition);
+}
+
+.cafee{
+
+   height: 100vh;
+   /* background:url(مكان الصوره ../img/DALL.webp)  ; */
+   background-repeat: no-repeat;
+   background-size:cover ;
+   color: #fef9f5;
+   
+  
+ }  
+.prodct_cont{
+  background-color: var(--main-color);
+  height: 100vh;
+}
+ .prodct{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+ }
+ .prodct_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   }
+ .prodct_img img{
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.prodct span ,h3{
+  color: var(--primary-color);
+}
+/* Media Queries */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .containers {
+    width: var(--container-width-md);
+  }
+  html {
+    font-size: 15px;
+  }
+  .started a {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .containers {
+    width: var(--container-width-lg);
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2.4em;
+  }
+  .started a {
+    width: 50%;
+  }
+}
